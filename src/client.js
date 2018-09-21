@@ -1,4 +1,4 @@
-import KateJSClient from 'katejs/dist/client';
+import KateJSClient from 'katejs/lib/client';
 
 import AppClient from './AppClient';
 

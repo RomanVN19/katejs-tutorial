@@ -1,4 +1,4 @@
-import { use } from 'katejs/dist/client';
+import { use } from 'katejs/lib/client';
 
 import { structures, title, packageName } from './structure';
 

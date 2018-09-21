@@ -1,4 +1,4 @@
-import Fields from 'katejs/dist/fields';
+import Fields from 'katejs/lib/fields';
 
 const Task = {
   name: 'task',
