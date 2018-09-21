@@ -1,5 +1,5 @@
-import KatePlatformClient from 'katejs/dist/client';
+import KateJSClient from 'katejs/dist/client';
 
 import AppClient from './AppClient';
 
-KatePlatformClient({ AppClient });
+KateJSClient({ AppClient });
