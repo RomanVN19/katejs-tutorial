@@ -7,6 +7,13 @@ const AppClient = parent => class Client extends use(parent) {
   constructor(params) {
     super(params);
     this.init({ structures });
+    // this.allForms == {
+    //   ProjectList,
+    //   ProjectItem,
+    //   ..
+    // }
+    // теперь можно модифицировать классы форм
+    // через this.allForms[_form_name_]
   }
 };
 AppClient.package = packageName;
