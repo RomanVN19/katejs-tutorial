@@ -8,8 +8,8 @@ const AppClient = parent => class Client extends use(parent) {
     super(params);
     this.init({ structures });
     // this.allForms == {
-    //   ProjectList,
-    //   ProjectItem,
+    //   TaskList,
+    //   TaskItem,
     //   ..
     // }
     // теперь можно модифицировать классы форм
