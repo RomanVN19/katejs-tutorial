@@ -1,7 +1,6 @@
 import Fields from 'katejs/lib/fields';
 
 const Task = {
-  name: 'task',
   fields: [
     {
       name: 'title',

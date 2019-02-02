@@ -1,7 +1,6 @@
-import KateJS from 'katejs';
-import AppServer from './AppServer';
+import KateJSClient from 'katejs/lib/client';
 
-const platform = new KateJS({ AppServer });
-platform.compileClient();
-// platform.syncDatabase(); // run once when structure changes
-platform.startServer();
+import AppClient from './AppClient';
+import translations from './translations';
+
+KateJSClient({ AppClient, translations });
