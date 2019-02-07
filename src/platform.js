@@ -19,9 +19,9 @@ const http = {
   port: process.env.PORT || env.http.port,
 };
 
-const platform = new KateJS({ AppServer, http, database });
+const platform = new KateJS({ AppServer, http, database, env });
 if (process.argv.indexOf('build-client') > -1) {
-  platform.createServer();
+  platform.createServer(); // for index title
   platform.compileClient();
 } else {
   platform.compileClient();

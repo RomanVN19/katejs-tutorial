@@ -5,6 +5,7 @@ import env from './front.env.json';
 
 const AppClient = parent => class Client extends use(parent) {
   static title = title;
+
   constructor(params) {
     super(params);
     this.baseUrl = env.apiUrl || '/api';

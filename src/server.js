@@ -19,7 +19,7 @@ const http = {
   port: process.env.PORT || env.http.port,
 };
 
-const server = new KateJSServer({ AppServer, http, database });
+const server = new KateJSServer({ AppServer, http, database, env });
 if (process.argv.indexOf('dbsync') > -1) {
   server.syncDatabase();
 } else {
