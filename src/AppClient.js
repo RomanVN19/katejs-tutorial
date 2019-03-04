@@ -11,6 +11,7 @@ const AppClient = parent => class Client extends use(parent) {
     this.baseUrl = env.apiUrl || '/api';
 
     this.init({ structures, addToMenu: true });
+
     // this.forms == {
     //   TaskList,
     //   TaskItem,
