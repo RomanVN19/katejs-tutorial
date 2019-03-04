@@ -3,6 +3,7 @@ import { structures, title, packageName } from './structure';
 
 const AppServer = parent => class Server extends use(parent) {
   static title = title;
+
   constructor(params) {
     super(params);
     makeEntitiesFromStructures(this.entities, structures);

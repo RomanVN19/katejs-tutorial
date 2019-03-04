@@ -18,7 +18,7 @@
   "author": "Roman Nep <neproman@gmail.com>",
   "license": "GPL-3.0",
   "dependencies": {
-    "katejs": "^0.5.2"
+    "katejs": "^0.5.3"
   },
   "devDependencies": {
     "@babel/node": "^7.2.2",
