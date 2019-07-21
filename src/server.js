@@ -1,5 +1,6 @@
 import KateJSServer from 'katejs/lib/server';
 import AppServer from './AppServer';
+import translations from './translations';
 
 let env;
 if (process.env.ENV) {
@@ -19,7 +20,7 @@ const http = {
   port: process.env.PORT || env.http.port,
 };
 
-const server = new KateJSServer({ AppServer, http, database, env });
+const server = new KateJSServer({ AppServer, http, database, env, translations });
 if (process.argv.indexOf('dbsync') > -1) {
   server.syncDatabase();
 } else {
