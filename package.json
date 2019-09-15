@@ -1,6 +1,6 @@
 {
   "name": "katejs-boilerplate",
-  "version": "1.4.1",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,8 +8,7 @@
     "dev-server": "cross-env ENV=local nodemon --watch src/AppServer.js  --watch src/entities --exec babel-node src/server.js",
     "dev-client": "cross-env ENV=local babel-node makeEnv.js && react-scripts start",
     "dev-dbsync": "cross-env ENV=local babel-node src/server.js dbsync",
-    "dev-build-client": "cross-env ENV=local babel-node makeEnv.js && babel-node src/platform.js build-client",
-    "build-client": "babel-node makeEnv.js && babel-node src/platform.js build-client",
+    "build-client": "babel-node makeEnv.js && react-scripts build",
     "build-server": "babel src --out-dir lib --copy-files",
     "dbsync": "babel-node src/server.js dbsync",
     "build": "babel-node makeEnv.js && react-scripts build",
@@ -19,11 +18,12 @@
   "author": "Roman Nep <neproman@gmail.com>",
   "license": "GPL-3.0",
   "dependencies": {
-    "@babel/node": "^7.2.2",
-    "babel-plugin-module-resolver": "^3.1.1",
-    "katejs": "^0.7.3"
+    "katejs": "^1.0.10"
   },
   "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/node": "^7.2.2",
+    "babel-plugin-module-resolver": "^3.1.1",
     "cross-env": "^5.2.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-import-resolver-babel-module": "^5.0.1",

@@ -1,4 +1,4 @@
-import KateJSServer from 'katejs/lib/server';
+import { Server as KateJSServer } from 'katejs';
 import AppServer from './AppServer';
 import translations from './translations';
 
