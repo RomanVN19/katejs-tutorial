@@ -1,6 +1,6 @@
 {
   "name": "katejs-boilerplate",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
   "author": "Roman Nep <neproman@gmail.com>",
   "license": "GPL-3.0",
   "dependencies": {
-    "katejs": "^1.0.15"
+    "katejs": "^1.0.17"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.0",
