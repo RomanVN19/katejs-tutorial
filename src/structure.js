@@ -1,27 +1,36 @@
 import Fields from 'katejs/lib/fields';
 
-const Task = {
+const Wallet = {
   fields: [
     {
       name: 'title',
       type: Fields.STRING,
     },
   ],
-  tables: [
+};
+
+const IncomeArticle = {
+  fields: [
     {
-      name: 'users',
-      fields: [
-        {
-          name: 'title',
-          type: Fields.STRING,
-        },
-      ],
+      name: 'title',
+      type: Fields.STRING,
+    },
+  ],
+};
+const ExpenseArticle = {
+  fields: [
+    {
+      name: 'title',
+      type: Fields.STRING,
     },
   ],
 };
 
-export const title = 'Boilerplate app';
-export const packageName = 'boilerplate_app';
+
+export const title = 'Tutorial app';
+export const packageName = 'tutorial_app';
 export const structures = {
-  Task,
+  Wallet,
+  IncomeArticle,
+  ExpenseArticle,
 };

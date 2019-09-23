@@ -1,6 +1,6 @@
 {
-  "name": "katejs-boilerplate",
-  "version": "2.0.1",
+  "name": "katejs-tutorial",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
