@@ -49,6 +49,40 @@ const Income = {
   ],
 };
 
+const Expense = {
+  fields: [
+    {
+      name: 'date',
+      type: Fields.DATE,
+    },
+    {
+      name: 'wallet',
+      type: Fields.REFERENCE,
+      entity: 'Wallet',
+    },
+    {
+      name: 'total',
+      type: Fields.DECIMAL,
+    },
+  ],
+  tables: [
+    {
+      name: 'expensesDetails',
+      fields: [
+        {
+          name: 'article',
+          type: Fields.REFERENCE,
+          entity: 'ExpenseArticle',
+        },
+        {
+          name: 'sum',
+          type: Fields.DECIMAL,
+        },
+      ],
+    },
+  ],
+};
+
 export const title = 'Tutorial app';
 export const packageName = 'tutorial_app';
 export const structures = {
@@ -56,4 +90,5 @@ export const structures = {
   ExpenseArticle,
   Wallet,
   Income,
+  Expense,
 };

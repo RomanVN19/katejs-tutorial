@@ -1,6 +1,8 @@
 import { makeEntitiesFromStructures, use } from 'katejs';
 import { structures, title, packageName } from './structure';
 
+import ExpenseMixin from './entities/ExpenseMixin';
+
 const AppServer = parent => class Server extends use(parent) {
   static title = title;
 
@@ -8,11 +10,10 @@ const AppServer = parent => class Server extends use(parent) {
     super(params);
     makeEntitiesFromStructures(this.entities, structures);
 
-    // this.entites == {
-    //   Task, // class
-    //   ...
-    // }
-    // Can be changeg by name  this.entities[_entity_name_]
+    this.entities = {
+      ...this.entities,
+      Expense: ExpenseMixin(this.entities.Expense),
+    };
   }
 };
 AppServer.package = packageName;
