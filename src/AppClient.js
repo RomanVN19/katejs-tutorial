@@ -1,14 +1,16 @@
 import { use } from 'katejs/lib/client';
+import { AppDoc } from 'katejs-modules/lib/client';
 
 import { structures, title, packageName } from './structure';
 import env from './front.env.json';
 
 import IncomeFormMixin from './forms/IncomeItemMixin';
 import IncomeReport from './forms/IncomeReport';
-import ExpenseItemMixin from './forms/ExpenseitemMixin';
+import ExpenseItemMixin from './forms/ExpenseItemMixin';
 import ExpenseReport from './forms/ExpenseReport';
+import MoneyReport from './forms/MoneyReport';
 
-const AppClient = parent => class Client extends use(parent) {
+const AppClient = parent => class Client extends use(parent, AppDoc) {
   static title = title;
 
   constructor(params) {
@@ -22,7 +24,10 @@ const AppClient = parent => class Client extends use(parent) {
       IncomeReport,
       ExpenseItem: ExpenseItemMixin(this.forms.ExpenseItem),
       ExpenseReport,
+      MoneyReport,
     };
+    this.forms.IncomeList.doc = true;
+    this.forms.ExpenseList.doc = true;
     this.menu.push(
       {
         form: 'IncomeReport',
@@ -31,6 +36,10 @@ const AppClient = parent => class Client extends use(parent) {
       {
         form: 'ExpenseReport',
         title: 'Expense report',
+      },
+      {
+        form: 'MoneyReport',
+        title: 'Money report',
       },
     );
   }

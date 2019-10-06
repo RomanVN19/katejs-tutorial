@@ -29,10 +29,6 @@ const ExpenseArticle = {
 const Income = {
   fields: [
     {
-      name: 'date',
-      type: Fields.DATE,
-    },
-    {
       name: 'wallet',
       type: Fields.REFERENCE,
       entity: 'Wallet',
@@ -51,10 +47,6 @@ const Income = {
 
 const Expense = {
   fields: [
-    {
-      name: 'date',
-      type: Fields.DATE,
-    },
     {
       name: 'wallet',
       type: Fields.REFERENCE,
@@ -83,9 +75,27 @@ const Expense = {
   ],
 };
 
+const MoneyRecord = {
+  skipForForm: true,
+  fields: [
+    {
+      name: 'wallet',
+      type: Fields.REFERENCE,
+      entity: 'Wallet',
+    },
+  ],
+  resources: [
+    {
+      name: 'sum',
+      type: Fields.DECIMAL,
+    },
+  ],
+};
+
 export const title = 'Tutorial app';
 export const packageName = 'tutorial_app';
 export const structures = {
+  MoneyRecord,
   IncomeArticle,
   ExpenseArticle,
   Wallet,

@@ -1,5 +1,7 @@
 
 export default ItemForm => class ExpenseItem extends ItemForm {
+  static doc = true;
+
   constructor(args) {
     super(args);
 
