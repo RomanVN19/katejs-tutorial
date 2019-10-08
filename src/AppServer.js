@@ -1,16 +1,18 @@
 import { makeEntitiesFromStructures, use } from 'katejs';
-import { AppDoc } from 'katejs-modules';
+import { AppDoc, AppUser } from 'katejs-modules';
 import { structures, title, packageName } from './structure';
 
 import ExpenseMixin from './entities/ExpenseMixin';
 import IncomeMixin from './entities/IncomeMixin';
 
-const AppServer = parent => class Server extends use(parent, AppDoc) {
+const AppServer = parent => class Server extends use(parent, AppDoc, AppUser) {
   static title = title;
 
   constructor(params) {
     super(params);
     makeEntitiesFromStructures(this.entities, structures);
+
+    this.setAuthParams({ jwtSecret: this.env.jwtSecret || 'default' });
 
     this.entities = {
       ...this.entities,

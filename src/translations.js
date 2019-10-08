@@ -1,13 +1,12 @@
-// import { translations } from 'katejs/lib/client';
+import { translations } from 'katejs/lib/client';
 
 /* eslint-disable quote-props */
-const translate = undefined;
-// {
-//   languages: ['ru'],
-//   ru: {
-//     ...translations.ru,
-//     'Tasks': 'Задачи',
-//   },
-// };
+const translate = {
+  languages: ['ru'],
+  ru: {
+    ...translations.ru,
+    'Expenses': 'Расходы',
+  },
+};
 
 export default translate;
