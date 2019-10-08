@@ -18,7 +18,7 @@
   "author": "Roman Nep <neproman@gmail.com>",
   "license": "GPL-3.0",
   "dependencies": {
-    "katejs": "^1.0.22",
+    "katejs": "^1.0.23",
     "katejs-modules": "0.0.3"
   },
   "devDependencies": {
