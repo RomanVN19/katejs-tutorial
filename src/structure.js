@@ -76,7 +76,6 @@ const Expense = {
 };
 
 const MoneyRecord = {
-  skipForForm: true,
   fields: [
     {
       name: 'wallet',
