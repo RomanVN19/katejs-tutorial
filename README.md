@@ -1,5 +1,4 @@
-# Boilerplate app for [KateJS](https://github.com/romannep/katejs)
-
+# Tutorial app for [KateJS](https://github.com/romannep/katejs)
 
 # Database
 По умолчанию используется база данных MySQL
