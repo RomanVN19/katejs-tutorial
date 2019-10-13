@@ -91,6 +91,15 @@ const MoneyRecord = {
   ],
 };
 
+export const Settings = {
+  fields: [
+    {
+      name: 'companyName',
+      type: Fields.STRING,
+    },
+  ],
+};
+
 export const title = 'Tutorial app';
 export const packageName = 'tutorial_app';
 export const structures = {

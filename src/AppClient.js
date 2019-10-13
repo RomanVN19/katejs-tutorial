@@ -1,7 +1,7 @@
 import { use } from 'katejs/lib/client';
-import { AppDoc, AppUser } from 'katejs-modules/lib/client';
+import { AppDoc, AppUser, AppSettings } from 'katejs-modules/lib/client';
 
-import { structures, title, packageName } from './structure';
+import { structures, title, packageName, Settings } from './structure';
 import env from './front.env.json';
 
 import IncomeFormMixin from './forms/IncomeItemMixin';
@@ -9,8 +9,9 @@ import IncomeReport from './forms/IncomeReport';
 import ExpenseItemMixin from './forms/ExpenseItemMixin';
 import ExpenseReport from './forms/ExpenseReport';
 import MoneyReport from './forms/MoneyReport';
+import TestForm from './forms/TestForm';
 
-const AppClient = parent => class Client extends use(parent, AppDoc, AppUser) {
+const AppClient = parent => class Client extends use(parent, AppDoc, AppUser, AppSettings) {
   static title = title;
 
   constructor(params) {
@@ -25,10 +26,15 @@ const AppClient = parent => class Client extends use(parent, AppDoc, AppUser) {
       ExpenseItem: ExpenseItemMixin(this.forms.ExpenseItem),
       ExpenseReport,
       MoneyReport,
+      TestForm,
     };
     this.forms.IncomeList.doc = true;
     this.forms.ExpenseList.doc = true;
     this.menu.push(
+      {
+        form: 'TestForm',
+        title: 'Test form',
+      },
       {
         form: 'IncomeReport',
         title: 'Income report',
@@ -42,6 +48,9 @@ const AppClient = parent => class Client extends use(parent, AppDoc, AppUser) {
         title: 'Money report',
       },
     );
+    this.saveAuth = true;
+
+    this.settingsParams = Settings;
   }
 };
 AppClient.package = packageName;

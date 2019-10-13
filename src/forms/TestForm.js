@@ -6,8 +6,8 @@ export default class TestForm extends Form {
     this.elements = [
       {
         type: Elements.LABEL,
-        title: 'Hello world',
-      },
+        title: `Company name settings ${this.app.settings.companyName}`,
+      }
     ];
   }
 }

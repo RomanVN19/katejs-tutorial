@@ -19,7 +19,7 @@
   "license": "GPL-3.0",
   "dependencies": {
     "katejs": "^1.0.22",
-    "katejs-modules": "0.0.3"
+    "katejs-modules": "^0.0.4"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.0",
